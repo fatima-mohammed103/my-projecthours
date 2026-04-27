@@ -6,13 +6,16 @@
     <title>Time Zone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/css/all.css">
-    <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style></style>
 </head>
 <body>
    <div class="parent-bag">
  
     <!--navbar-->
-    <nav>
+    <!-- <nav>
     <div class="nav-left"><h2>Time <span>Zone</span></h2></div>
     <div class="nav-right">
 <a href="#">Home</a>
@@ -21,9 +24,57 @@
 <a href="#">Priacy</a>
 <a href="#"><i class="fa-solid fa-cart-shopping me-3 fa-1x"></i></a>
     </div>
-    </nav>
+    </nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <button class="btn border-0 d-lg-none me-2" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                Time <span style="color: red;">Zone</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">Products</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">Privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <a href="#" class="cart-icon-link text-dark position-relative">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">
+                    3
+                </span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div id="sideMenu" class="side-menu">
+    <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+        <h5 class="m-0 fw-bold">Menu</h5>
+        <button class="btn-close" onclick="toggleMenu()"></button>
+    </div>
+    <div class="p-3">
+        <nav class="nav flex-column">
+            <a class="nav-link py-2" href="#"><i class="fa-solid fa-house me-2"></i> Home</a>
+            <a class="nav-link py-2" href="#"><i class="fa-solid fa-info-circle me-2"></i> About Us</a>
+            <a class="nav-link py-2" href="#"><i class="fa-solid fa-bag-shopping me-2"></i> Products</a>
+            <a class="nav-link py-2" href="#"><i class="fa-solid fa-lock me-2"></i> Privacy</a>
+        </nav>
+    </div>
+</div>
+
+<div id="overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+
     <!--main-->
-<main>
+<!-- <main>
     <div class="main-left">
     <h3>Select Your New<br>Perfect Style</h3>
     <p>Ut enim ad minim veniam,quis nostrud exerctation uilamco laboris nisi ut aliquip ex <br>ea commodo consequat is aute irure</p>
@@ -32,57 +83,192 @@
     <div class="main-right">
         <img src="hour/watch.png" alt="" height="600px" width="250pxS">
     </div>
+</main> -->
+<main class="hero-section">
+    <div class="container">
+    <div class="container-fluid px-3">
+        <div class="row align-items-center g-0"> <div class="col-7 main-left">
+                <h3>Select Your New<br>Perfect Style</h3>
+                <p class="d-none d-md-block">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="signup.html">
+                    <button class="shop-btn">SHOP NOW</button>
+                </a>
+            </div>
+            
+            <div class="col-5 text-center main-right">
+                <img src="hour/watch.png" alt="Watch" class="img-fluid hero-img">
+            </div>
+
+        </div>
+    </div>
+    </div>
 </main>
 <!--section-one-->
-<section class="section-one">
-<div><p>New Prodects</p></div>
-<div class="section-one-imgs">
-<img src="hour/new_product1.png" alt="" height="480px" width="300px">
-<img src="hour/new_product2.png" alt=""width="300px" height="480px">
-<img src="hour/new_product3.png" alt=""width="300px"height="480px">
-</div>
+<section class="section-one py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="section-title">New Products</h2>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center section-one-imgs">
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="product-wrapper">
+                    <img src="hour/new_product1.png" alt="New Product 1" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="product-wrapper">
+                    <img src="hour/new_product2.png" alt="New Product 2" class="img-fluid custom-img">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="product-wrapper">
+                    <img src="hour/new_product3.png" alt="New Product 3" class="img-fluid custom-img">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!--section-tow-->
-
-<section class="section-tow">
-    <img src="hour/gallery1.png" alt="" width="50%" height="480px">
-    <img src="hour/gallery2.png" alt=""width="20%" height="480px">
-    <div class="img-sec2" >
-    <img src="hour/gallery3.png" alt="" width="73%" height="227px">
-    <img src="hour/gallery4.png" alt=""width="73%" height="227px"></div>
+<section class="gallery-section py-5">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 32px ;padding-bottom: 9px;">OLX Watches</h2>
+    <div class="container-fluid px-4">
+        <div class="row g-3">
+            <div class="col-md-6 col-12">
+                <div class="img-wrapper">
+                    <img src="hour/gallery1.png" alt="Gallery 1" class="img-fluid w-100 main-img">
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="img-wrapper">
+                    <img src="hour/gallery2.png" alt="Gallery 2" class="img-fluid w-100 main-img">
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="d-flex flex-column h-100 gap-3">
+                    <div class="img-wrapper flex-grow-1">
+                        <img src="hour/gallery3.png" alt="Gallery 3" class="img-fluid w-100 side-img">
+                    </div>
+                    <div class="img-wrapper flex-grow-1">
+                        <img src="hour/gallery4.png" alt="Gallery 4" class="img-fluid w-100 side-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </section>
-
 
 <!--section-three-->
+<section class="section-three py-5">
+    <div class="container">
+        <div class="row mb-4 text-center">
+            <div class="col-12 pra">
+                <h3 class="fw-bold">Popular Items</h3>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quos temporibus praesentium sint officia optio esse eos quo deserunt explicabo rem</p>
+            </div>
+        </div>
 
-<section class="section-three">
-    <div class="pra">
-<h3>Popular Items</h3>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quos temporibus praesentium sint officia optio<br> esse eos quo deserunt explicabo rem</p>
-    </div> <div class="hour-pop">
-<div class="hour-3"><div class="img-div"><img src="hour/popular1.png" alt="" width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3>
-<p>$45,743</p></div>
+        <div class="row g-3 justify-content-center">
+            
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular1.png" alt="Watch 1" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="hour-3"><div class="img-div"><img src="hour/popular2.png" alt=""  width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3> <p>$45,743</p></div>
-<div class="hour-3"><div class="img-div"><img src="hour/popular3.png" alt=""  width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3><p>$45,743</p></div>
-<div class="hour-3"><div class="img-div"><img src="hour/popular4.png" alt=""  width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3><p>$45,743</p></div>
-<div class="hour-3"><div class="img-div"><img src="hour/popular5.png" alt=""  width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3><p>$45,743</p></div>
-<div class="hour-3"><div class="img-div"><img src="hour/popular6.png" alt=""  width="290px" height="250px"></div> <h3>Thermo Ball Etip Gloves</h3><p>$45,743</p></div>
-</div>
-    
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular2.png" alt="Watch 2" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular3.png" alt="Watch 3" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular4.png" alt="Watch 4" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular5.png" alt="Watch 5" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-6">
+                <div class="hour-3">
+                    <div class="img-div">
+                        <img src="hour/popular6.png" alt="Watch 6" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Thermo Ball Etip Gloves</h3>
+                        <p class="product-price">$45,743</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<!--section-four-->
-<section class="section-four">
-<div class="four-one">
-<h3>Watch Of Choice</h3>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla laudantium corrupti dicta<br> eius sunt, ab officiis tenetur sint porro voluptates sit et quos accusamus esse<br> perferendis illum  Nesciunt?</p>
-<button>SHOW WATCHES</button>
+
+
+<!--section-four--><section class="section-four py-5">
+    <div class="container">
+    <div class="container-fluid px-lg-5">
+        <div class="row align-items-center g-0">
+            
+            <div class="col-7 four-one">
+                <h3>Watch Of Choice</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nulla laudantium corrupti dicta eius sunt, ab officiis tenetur sint porro.</p>
+                <button class="btn-show">SHOW WATCHES</button>
+            </div>
+            
+            <div class="col-5 text-center">
+                <img src="hour/choce_watch1.png" alt="Choice Watch" class="img-fluid choice-img">
+            </div>
 </div>
-<div><img src="hour/choce_watch1.png" alt="" width="380px"></div>
-
-
+        </div>
+    </div>
+</section>
 
 
 
@@ -92,6 +278,18 @@
 
 
    </div> 
-   <script src="main.js"></script>
+   <script>
+  function toggleMenu() {
+        document.getElementById('sideMenu').classList.toggle('active');
+        document.getElementById('overlay').classList.toggle('active');
+        
+        // قفل السكرول عند فتح المنيو
+        if (document.getElementById('sideMenu').classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }}
+</script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
